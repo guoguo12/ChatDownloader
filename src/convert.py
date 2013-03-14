@@ -37,7 +37,7 @@ def getRaw(filename):
 
 def extractConvo(text):
     text = text.split('\r\n\r\n')[3]
-    text = text.split('------')[0]
+    text = text.split('------=_Part_')[0]
     text = quopri.decodestring(text)
     return text
 
