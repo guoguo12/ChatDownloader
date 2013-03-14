@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+"""download.py: Downloads Gmail logs using IMAP."""
+
 import convert
 import imaplib
 import sys

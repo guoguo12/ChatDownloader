@@ -1,5 +1,9 @@
-import sys
+#!/usr/bin/env python
+
+"""convert.py: Converts a raw downloaded Gmail chat log to a HTML file."""
+
 import quopri
+import sys
 
 def convert(inputFile, outputFilename = ""):
     if outputFilename == "":
