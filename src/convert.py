@@ -21,10 +21,11 @@ def convertFilelist(filelist, separateOutputFiles, outputFilename = "output.html
         for filename in filelist:
             convert(filename)
     else:
-        outputText = "<html><font face=\"Arial\" size=\"2\">\n"
+        outputText = "<html><font face=\"Arial\" size=\"2\">"
         for filename in filelist:
+            outputText += "\r\n\r\n<!-------- " + filename + " -------->\r\n"
             outputText += extractConvo(getRaw(filename))
-            outputText += "\n\n<hr>\n"
+            outputText += "<hr>"
         outputText += "</font></html>"
         toFile(outputFilename, outputText)
         print str(len(filelist)) + " files converted to '" + outputFilename + "'."
@@ -36,7 +37,8 @@ def getRaw(filename):
     return text
 
 def extractConvo(text):
-    text = text.split('\r\n\r\n')[3]
+    text = text.split('Content-Type: text/html; charset=', 1)[1]
+    text = text.split('\r\n\r\n', 1)[1]
     text = text.split('------=_Part_')[0]
     text = quopri.decodestring(text)
     return text
