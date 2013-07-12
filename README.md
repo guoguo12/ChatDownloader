@@ -3,8 +3,8 @@ Gmail Chat Downloader
 
 Efficiently download chat conversation logs from Gmail using the Internet Message Access Protocol (IMAP) and convert raw (quoted-printable encoded) logs into HTML files viewable with any web browser.
 
-Note that Gmail Chat Downloader is currently under development. 
-Additional examples, features, and documentation will be added in the near future.
+Note that, as of Summer 2013, Gmail Chat Downloader no longer works with Gmail's current chat system.
+Old chats can still be downloaded, however, which makes Gmail Chat Downloader an excellent archival tool.
 
 Instructions
 -------
